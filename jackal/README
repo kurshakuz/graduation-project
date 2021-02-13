@@ -1,0 +1,12 @@
+To launch simulation:
+roslaunch jackal_gazebo jackal_world.launch
+
+You can get pose from /gazebo/model_states or by using:
+rosservice call /gazebo/get_model_state "model_name: 'jackal'" 
+You can get velocities from /joint_states and control them using:
+
+/joint1_velocity_controller/command	-front_left_wheel	
+/joint2_velocity_controller/command	-front_right_wheel
+/joint3_velocity_controller/command	-rear_left_wheel
+/joint4_velocity_controller/command	-rear_right_wheel
+

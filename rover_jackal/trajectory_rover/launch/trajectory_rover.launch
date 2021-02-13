@@ -1,0 +1,6 @@
+<launch>
+    <node name="trajectory_rover" pkg="trajectory_rover" type="trajectory_rover" output="screen" />	
+    	<param name="sampleTime" type="double" value="0.01" /> <!-- Parameter to set the loop sampling time.-->
+
+    <node name="rqt_reconfigure" pkg="rqt_reconfigure" type="rqt_reconfigure" />
+</launch>

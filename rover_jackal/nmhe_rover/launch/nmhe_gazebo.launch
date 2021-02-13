@@ -1,0 +1,9 @@
+<launch>
+    <node name="nmhe_rover" pkg="nmhe_rover" type="nmhe_rover" output="screen" />
+    <param name="verbose" type="bool" value="true" /> <!-- Parameter to display NMHE messages.-->
+    <param name="sampleTime" type="double" value="0.02" /> <!-- Parameter to set control loop sampling time.-->
+    <param name="mocap_topic_part" type="string" value="mocap" /> <!-- Parameter to specify part of the topic name for localization data. -->
+    <param name="num_params" type="int" value="2" /> <!-- Parameter to specify the number of parameters to estimate. -->
+
+    <include file="$(find nmhe_rover)/launch/rover_frames/jackal_gazebo.xml" />
+</launch>

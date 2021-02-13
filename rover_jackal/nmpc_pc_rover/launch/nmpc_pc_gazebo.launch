@@ -1,0 +1,9 @@
+<launch>
+    <node name="nmpc_pc_rover" pkg="nmpc_pc_rover" type="nmpc_pc_rover" output="screen" />
+    <param name="verbose" type="bool" value="true" /> <!-- Parameter to display NMPC messages.-->
+    <param name="sampleTime" type="double" value="0.02" /> <!-- Parameter to set control loop sampling time.-->
+    <param name="mocap_topic_part" type="string" value="mocap" /> <!-- Parameter to specify part of the topic name for localization data. -->
+
+    <include file="$(find nmpc_pc_rover)/launch/rover_frames/jackal_gazebo.xml" />
+
+</launch>

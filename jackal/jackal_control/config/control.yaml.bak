@@ -1,0 +1,19 @@
+jackal_joint_publisher:
+  type: "joint_state_controller/JointStateController"
+  publish_rate: 50
+
+joint1_velocity_controller:
+    type: velocity_controllers/JointVelocityController
+    joint: front_left_wheel
+
+joint2_velocity_controller:
+    type: velocity_controllers/JointVelocityController
+    joint: front_right_wheel
+
+joint3_velocity_controller:
+    type: velocity_controllers/JointVelocityController
+    joint: rear_left_wheel
+
+joint4_velocity_controller:
+    type: velocity_controllers/JointVelocityController
+    joint: rear_right_wheel

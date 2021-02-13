@@ -1,0 +1,10 @@
+<launch>
+    <!-- Jackal gazebo -->
+    <param name="x_0" type="double" value="0.0" /> <!-- Initial value for x-position. -->
+    <param name="y_0" type="double" value="0.0" /> <!-- Initial value for y-position. -->
+    <param name="psi_0" type="double" value="0.0" /> <!-- Initial value for heading. -->
+    <param name="vl_0" type="double" value="0.0" /> <!-- Initial value for x-velocity for left wheel. -->
+    <param name="vr_0" type="double" value="0.0" /> <!-- Initial value for x-velocity for right wheel. -->
+    <param name="alphal_0" type="double" value="1.0" /> <!-- Initial value for slip-parameter for left wheel. -->
+    <param name="alphalr_0" type="double" value="1.0" /> <!-- Initial value for slip-parameter for right wheel. -->
+</launch>

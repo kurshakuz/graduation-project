@@ -1,0 +1,14 @@
+<launch>
+    <!-- Jackal gazebo -->
+    <param name="W_Wn_factor" type="double" value="1.5" /> <!-- Factor for WN weights. -->
+    <param name="acc1_ref" type="double" value="0.0" /> <!-- Reference for acceleration1. -->
+    <param name="acc2_ref" type="double" value="0.0" /> <!-- Reference for acceleration2. -->
+
+    <param name="W_x" type="double" value="50.0" /> <!-- Weight for x-position. -->
+    <param name="W_y" type="double" value="50.0" /> <!-- Weight for y-position. -->
+    <param name="W_psi" type="double" value="20.0" /> <!-- Weight for heading angle. -->
+    <param name="W_vl" type="double" value="50.0" /> <!-- Weight for x-velocity left wheel. -->
+    <param name="W_vr" type="double" value="50.0" /> <!-- Weight for y-velocity right wheel. -->
+    <param name="W_acc1" type="double" value="0.01" /> <!-- Weight for acceleration1. -->
+    <param name="W_acc2" type="double" value="0.01" /> <!-- Weight for acceleration2. -->
+</launch>

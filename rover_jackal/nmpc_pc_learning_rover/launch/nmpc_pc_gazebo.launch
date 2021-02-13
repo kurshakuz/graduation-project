@@ -1,0 +1,14 @@
+<launch>
+    <node name="nmpc_pc_learning_rover" pkg="nmpc_pc_learning_rover" type="nmpc_pc_learning_rover" output="screen" />
+    <param name="verbose" type="bool" value="true" /> <!-- Parameter to display NMPC messages.-->
+    <param name="sampleTime" type="double" value="0.02" /> <!-- Parameter to set control loop sampling time.-->
+    <param name="use_params_estimates" type="bool" value="true" /> <!-- Parameter to let NMPC use parameter estimates.-->
+    <param name="mocap_topic_part" type="string" value="mocap" /> <!-- Parameter to specify part of the topic name for localization data. -->
+    <param name="params_predInit_topic" type="string" value="/nmhe/predInit" /> <!-- Parameter to specify the topic name for params_predInit. -->
+    <param name="params_data_topic" type="string" value="/nmhe/params" /> <!-- Parameter to specify the topic name for params_data. -->
+    <param name="init_param_1" type="double" value="1.0" /> <!-- Parameter to set initial estimate of the first param.-->
+    <param name="init_param_2" type="double" value="1.0" /> <!--  Parameter to set initial estimate of the second param.-->
+    
+    <include file="$(find nmpc_pc_learning_rover)/launch/rover_frames/jackal_gazebo.xml" />
+
+</launch>

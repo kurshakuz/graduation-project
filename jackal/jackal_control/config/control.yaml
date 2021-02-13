@@ -1,0 +1,65 @@
+# Publish all joint states -----------------------------------
+jackal_joint_publisher:
+  type: "joint_state_controller/JointStateController"
+  publish_rate: 50
+
+# Joint Velocity Controllers ---------------------------------------
+joint1_velocity_controller:
+    type: velocity_controllers/JointVelocityController
+    joint: front_left_wheel
+
+joint2_velocity_controller:
+    type: velocity_controllers/JointVelocityController
+    joint: front_right_wheel
+
+joint3_velocity_controller:
+    type: velocity_controllers/JointVelocityController
+    joint: rear_left_wheel
+
+joint4_velocity_controller:
+    type: velocity_controllers/JointVelocityController
+    joint: rear_right_wheel
+
+#gazebo_ros_control/pid_gains:
+#  front_left_wheel: {p: 0.1, i: 0.01, d: 0.00}
+#  front_right_wheel: {p: 0.1, i: 0.01, d: 0.00}
+#  rear_left_wheel: {p: 0.1, i: 0.01, d: 0.00}
+#  rear_right_wheel: {p: 0.1, i: 0.01, d: 0.00}
+
+# Torque Controllers ---------------------------------------
+# joint1_torque_controller:
+#     type: effort_controllers/JointEffortController
+#     joint: front_left_wheel
+
+# joint2_torque_controller:
+#     type: effort_controllers/JointEffortController
+#     joint: front_right_wheel
+
+# joint3_torque_controller:
+#     type: effort_controllers/JointEffortController
+#     joint: rear_left_wheel
+
+# joint4_torque_controller:
+#     type: effort_controllers/JointEffortController
+#     joint: rear_right_wheel
+
+## Effort Velocity Controllers ---------------------------------------
+#joint1_velocity_controller:
+#    type: effort_controllers/JointVelocityController
+#    joint: front_left_wheel
+#    pid: {p: 0.1, i: 0.01, d: 0.001}
+
+#joint2_velocity_controller:
+#    type: effort_controllers/JointVelocityController
+#    joint: front_right_wheel
+#    pid: {p: 0.1, i: 0.01, d: 0.001}
+
+#joint3_velocity_controller:
+#    type: effort_controllers/JointVelocityController
+#    joint: rear_left_wheel
+#    pid: {p: 0.1, i: 0.01, d: 0.001}
+
+#joint4_velocity_controller:
+#    type: effort_controllers/JointVelocityController
+#    joint: rear_right_wheel
+#    pid: {p: 0.1, i: 0.01, d: 0.001}
