@@ -6,7 +6,7 @@ Autonomous Skid-Steering Based Mobile Robot-Manipulation System for Automating W
 * Ubuntu
 * Eigen3 (Please install Eigen3 from the following link:https://eigen.tuxfamily.org/index.php?title=Main_Page)
 * rqt_multiplot
-## Instalation instructions
+## Installation instructions
 This set of instructions was tested for Ubuntu18 with ROS-Melodic. Additionally, we assume that you already have a complete ROS installation.
 * Please follow the following instructions:
 ```
