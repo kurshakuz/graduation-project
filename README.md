@@ -4,7 +4,8 @@ Autonomous Skid-Steering Based Mobile Robot-Manipulation System for Automating W
 ## Software Requirements for Social Navigation Part
 * ROS installation
 * Ubuntu
-
+* Eigen3 (Please install Eigen3 from the following link:https://eigen.tuxfamily.org/index.php?title=Main_Page)
+* rqt_multiplot
 ## Instalation instructions
 This set of instructions was tested for Ubuntu18 with ROS-Melodic. Additionally, we assume that you already have a complete ROS installation.
 * Please follow the following instructions:
@@ -16,10 +17,27 @@ git clone https://github.com/ALARIS-NU/social_navigation.git
 cd pedsim_ros/
 rosdep install --from-paths src --ignore-src -r -y
 cd ../
+cd rover_jackal/trajectory_rover/cfg/
+chmod +x set_trajectory_rover.cfg
+cd [workspace]
 catkin_make
 source devel/setup.bash
 ```
+## Running MPC
+* Simulation Environment
 
+        1. roslaunch jackal_gazebo empty_world.launch
+        2. roslaunch mocap_rover mocap_bridge_gazebo.launch
+
+* Start NMPC and trajectory
+
+        1. roslaunch nmpc_pc_rover nmpc_pc_gazebo.launch
+        2. roslaunch trajectory_rover trajectory_rover.launch
+
+* Start rqt_multiplot 
+
+        1. rqt_multiplot (use included files)
+        
 ## Running LMPCC
 * Simulation Environment
 
