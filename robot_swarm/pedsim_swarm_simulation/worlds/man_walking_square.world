@@ -1,0 +1,191 @@
+<?xml version="1.0" ?>
+<!-- this file is auto generated using pedsim_gazebo_plugin pkg -->    
+<sdf version="1.5">
+  <world name="default">
+      
+  <!-- Ground Plane --> 
+  <include>
+    <uri>model://ground_plane</uri>
+  </include>
+    
+  <include>
+    <uri>model://sun</uri>
+  </include>
+
+  <plugin name="ActorPosesPlugin" filename="libActorPosesPlugin.so">
+  </plugin>
+
+  <include>
+    <uri>model://square_room_walls</uri>
+  </include>
+
+  <include>
+		<uri>model://jersey_barrier</uri>
+    <pose>2 1 0 0 0 0</pose>
+	</include> 
+
+  <model name="construction_cone0">
+    <include>
+      <uri>model://construction_cone</uri>
+      <pose>18.8559 1.97421 -0 0 -0 0</pose>
+    </include> 
+  </model>
+  <model name="construction_cone1">
+    <include>
+      <uri>model://construction_cone</uri>
+      <pose>28.913 25.4603 -3e-06 -3e-06 -1e-06 -0</pose>
+    </include> 
+  </model>
+  <model name="construction_cone2">
+    <include>
+      <uri>model://construction_cone</uri>
+      <pose>26.9832 27.7892 -0 0 -0 0</pose>
+    </include> 
+  </model>
+  <model name="construction_cone3">
+    <include>
+      <uri>model://construction_cone</uri>
+      <pose>24.728 29.1581 -3e-06 -3e-06 -1e-06 -0</pose>
+    </include> 
+  </model>
+  <model name="construction_cone4">
+    <include>
+      <uri>model://construction_cone</uri>
+      <pose>15.235 20.6143 -1e-05 -1e-06 -0 -0</pose>
+    </include> 
+  </model>
+  <model name="construction_cone5">
+    <include>
+      <uri>model://construction_cone</uri>
+      <pose>19.5923 14.9944 0 -0 -0 -0</pose>
+    </include> 
+  </model>
+  <model name="construction_cone6">
+    <include>
+      <uri>model://construction_cone</uri>
+      <pose>11.5682 20.8579 -0 0 -1e-06 0</pose>
+    </include> 
+  </model>
+  <model name="construction_cone7">
+    <include>
+      <uri>model://construction_cone</uri>
+      <pose>19.8885 11.766 -0 0 -1e-06 0</pose>
+    </include> 
+  </model>
+  <model name="construction_cone8">
+    <include>
+      <uri>model://construction_cone</uri>
+      <pose>13.1332 1.9175 -1e-05 -1e-06 0 0</pose>
+    </include> 
+  </model>
+
+  <model name="dumpster0">
+    <include>
+      <uri>model://dumpster</uri>
+      <pose>27.0354 2.70218 0 0 0 3.1415</pose>
+    </include> 
+  </model>
+  <model name="dumpster1">
+    <include>
+      <uri>model://dumpster</uri>
+      <pose>17.0354 28.70218 0 0 0 0</pose>
+    </include> 
+  </model>
+  <model name="dumpster2">
+    <include>
+      <uri>model://dumpster</uri>
+      <pose>14.0354 28.70218 0 0 0 0</pose>
+    </include> 
+  </model>
+
+  <model name="construction_barrel0">
+    <include>
+      <uri>model://construction_barrel</uri>
+      <pose>5.34222 5.70017 -2e-06 -5e-06 -4e-06 -5.7e-05</pose>
+    </include> 
+  </model>
+  <model name="construction_barrel1">
+    <include>
+      <uri>model://construction_barrel</uri>
+      <pose>3.41373 26.6506 1e-06 3e-06 2e-06 -5.5e-05</pose>
+    </include> 
+  </model>
+  <model name="construction_barrel2">
+    <include>
+      <uri>model://construction_barrel</uri>
+      <pose>17.8467 18.2945 -0 0 -0 -3.8e-05</pose>
+    </include> 
+  </model>
+  <model name="construction_barrel3">
+    <include>
+      <uri>model://construction_barrel</uri>
+      <pose>12.6175 13.5295 1e-06 3e-06 2e-06 -3.2e-05</pose>
+    </include> 
+  </model>
+
+  <model name="drc_practice_orange_jersey_barrier0">
+    <include>
+      <uri>model://drc_practice_orange_jersey_barrier</uri>
+      <pose>10.856 17.0606 0 0 -0 0</pose>
+    </include> 
+  </model>
+  <model name="drc_practice_orange_jersey_barrier1">
+    <include>
+      <uri>model://drc_practice_orange_jersey_barrier</uri>
+      <pose>17.5954 11.3013 0 0 -0 1.57103</pose>
+    </include> 
+  </model>
+  <model name="drc_practice_orange_jersey_barrier2">
+    <include>
+      <uri>model://drc_practice_orange_jersey_barrier</uri>
+      <pose>20.7262 13.4012 0 0 -0 0</pose>
+    </include> 
+  </model>
+  <model name="jersey_barrier0">
+    <include>
+      <uri>model://jersey_barrier</uri>
+      <pose>1.49214 15.9277 0 0 0 -1.63224</pose>
+    </include> 
+  </model>
+  <model name="jersey_barrier1">
+    <include>
+      <uri>model://jersey_barrier</uri>
+      <pose>1.2507 11.9061 0 0 0 -1.63224</pose>
+    </include> 
+  </model>
+  <model name="jersey_barrier2">
+    <include>
+      <uri>model://jersey_barrier</uri>
+      <pose>1.70062 19.9784 0 0 0 -1.63224</pose>
+    </include> 
+  </model>
+
+  <model name="jersey_barrier3">
+    <include>
+      <uri>model://jersey_barrier</uri>
+      <pose>28.49214 15.9277 0 0 0 -1.63224</pose>
+    </include> 
+  </model>
+  <model name="jersey_barrier4">
+    <include>
+      <uri>model://jersey_barrier</uri>
+      <pose>28.2507 11.9061 0 0 0 -1.63224</pose>
+    </include> 
+  </model>
+  <model name="jersey_barrier5">
+    <include>
+      <uri>model://jersey_barrier</uri>
+      <pose>28.70062 19.9784 0 0 0 -1.63224</pose>
+    </include> 
+  </model>
+
+  <model name="fire_hydrant">
+    <include>
+      <uri>model://fire_hydrant</uri>
+      <pose>5.85085 4.04036 0 0 -0 0</pose>
+    </include> 
+  </model>
+  </world>
+</sdf>
+    
+        
