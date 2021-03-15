@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This scenario file was created by SGDiCoP on 2014-04-16T15:14:48-->
+<scenario>
+  <!--Waypoints (incl. WaitingQueues)-->
+  <!-- <waypoint id="bookshop_entry" x="-1.8" y="-0.5" r="5"/>
+  <waypoint id="bookshop_exit" x="-4.8" y="1.7" r="5"/>
+
+  <waypoint id="coffee_entry" x="-7.7" y="-1.7" r="5"/>
+  <waypoint id="coffee_exit" x="-5.4" y="-4" r="5"/> -->
+  <waypoint id="bookshop_entry" x="-1.8" y="-0.5" r="0.1"/>
+  <waypoint id="bookshop_exit" x="-4.8" y="1.7" r="0.1"/>
+
+  <waypoint id="coffee_entry" x="-7.7" y="-1.7" r="0.1"/>
+  <waypoint id="coffee_exit" x="-5.4" y="-4" r="0.1"/>
+
+  <waypoint id="robot_goal" x="22" y="27" r="2"/>
+  <waypoint id="robot_start" x="4" y="4" r="2"/>
+
+  <queue id="info_desk" x="20" y="15" direction="0"/>
+
+    <agent x="17" y="11" n="1" dx="0" dy="0" type="2">
+        <addwaypoint id="robot_start"/>
+        <addwaypoint id="robot_goal"/>
+    </agent>
+
+    <agent x="-2" y="-0.5" n="1" dx="3" dy="3" type="0">
+        <addwaypoint id="bookshop_entry"/>
+        <addwaypoint id="bookshop_exit"/>
+        <addwaypoint id="coffee_entry"/>
+        <addwaypoint id="coffee_exit"/>
+    </agent>
+</scenario>
