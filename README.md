@@ -58,3 +58,15 @@ source devel/setup.bash
         1. rosrun rqt_reconfigure rqt_reconfigure
         2. Click on the lmpcc parameters to start the robot motion by press the enable_output button
         3. Click on the lmpcc parameters to start planning by pressing the plan button
+
+## Run Gazebo and Pedsim based LMPCC navigation
+
+* Gazebo simulation world
+        1. roslaunch cpr_office_gazebo office_world_with_plugin.launch
+* LMPCC Obstacle Feed and Controller
+        1. roslaunch lmpcc_obstacle_feed lmpcc_obstacle_feed.launch
+        2. roslaunch lmpcc lmpcc.launch
+* Pedsim people spawn and vizualization in rviz
+        1. roslaunch pedsim_swarm_simulation pedsim_office_populated.launch
+* Control RQT tool
+        1. rosrun rqt_reconfigure rqt_reconfigure
