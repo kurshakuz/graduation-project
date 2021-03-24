@@ -45,9 +45,9 @@ parametrization:
 
 # Parameters for predefined reference path
 global_path:
-    x: [0, 5, 10, 15, 20,25]
-    y: [0, 1, -1, 1, -1, 0]
-    theta: [0, 0, 0, 0, 0, 0]
+    x: [0, 5, 10, 12, 15, 12, 10, 5, 0]
+    y: [1, 1, 1, 5, 1, 5, 1, 1, 1]
+    theta: [0, 0, 0, 0, 0, 0, 0, 0, 0]
     reference_velocity: 0.5
 
 # Collision avoidance parameters

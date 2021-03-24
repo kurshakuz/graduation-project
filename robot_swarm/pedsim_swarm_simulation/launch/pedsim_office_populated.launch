@@ -27,10 +27,9 @@
   <!-- Visualizer -->
   <include file="$(find pedsim_visualizer)/launch/visualizer.launch"/>
 
-  <node name="map_server" pkg="map_server" type="map_server" args="$(find pedsim_swarm_simulation)/maps/mymap.yaml"/>
-
+  <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find pedsim_swarm_simulation)/maps/mymap.yaml"/> -->
   <!-- Static transform between odom and map frame to allow for planning in the map frame-->
-  <node pkg="tf" type="static_transform_publisher" name="map_odom_broadcaster" args="0 0 0 0 0 0 map odom 100" />
+  <!-- <node pkg="tf" type="static_transform_publisher" name="map_odom_broadcaster" args="0 0 0 0 0 0 map odom 100" /> -->
 
   <!-- Rviz -->
   <node pkg="rviz" type="rviz" name="rviz" args="-d $(find pedsim_simulator)/rviz/social_contexts_activities.rviz" if="$(arg visualize)"/>
