@@ -79,3 +79,16 @@ source devel/setup.bash
         1. rosrun rqt_reconfigure rqt_reconfigure
         2. Click on the lmpcc parameters to start the robot motion by press the enable_output button
         3. Click on the lmpcc parameters to start planning by pressing the plan button
+
+
+## Version 1.0 launch procedure
+```
+- roslaunch lmpcc_obstacle_feed lmpcc_obstacle_feed.launch
+- roslaunch pedsim_swarm_simulation pedsim_office_populated.launch
+- roslaunch cpr_office_gazebo office_world_with_plugin.launch
+- roslaunch jackal_navigation amcl_demo.launch map_file:=/home/robot/catkin_ws_grad/src/graduation-project/robot_swarm/pedsim_swarm_simulation/maps/mymap.yaml
+- roslaunch jackal_viz view_robot.launch config:=localization
+- roslaunch lmpcc lmpcc.launch
+- roslaunch static_collision_avoidance static_collision_avoidance.launch
+- rosrun rqt_reconfigure rqt_reconfigure
+```
