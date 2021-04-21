@@ -111,3 +111,7 @@ catkin_package(
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
+
+catkin_install_python(PROGRAMS scripts/social_zones.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
