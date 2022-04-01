@@ -6,23 +6,59 @@ Autonomous Skid-Steering Based Mobile Robot-Manipulation System for Automating W
 * Ubuntu
 * Eigen3 (Please install Eigen3 from the following link:https://eigen.tuxfamily.org/index.php?title=Main_Page)
 * rqt_multiplot
+
 ## Installation instructions
 This set of instructions was tested for Ubuntu18 with ROS-Melodic. Additionally, we assume that you already have a complete ROS installation.
+
 * Please follow the following instructions:
 ```
-sudo apt-get install ros-melodic-jackal-control ros-melodic-jackal-gazebo ros-melodic-jackal-simulator ros-melodic-jackal-description ros-melodic-jackal-desktop ros-melodic-jackal-navigation ros-melodic-jackal-viz
-sudo apt install ros-melodic-people-msgs
-cd [workspace]/src
-git clone https://github.com/ALARIS-NU/social_navigation.git
-cd pedsim_ros/
-rosdep install --from-paths src --ignore-src -r -y
+sudo apt-get install ros-melodic-jackal-control ros-melodic-jackal-gazebo ros-melodic-jackal-simulator ros-melodic-jackal-description ros-melodic-jackal-desktop ros-melodic-jackal-navigation ros-melodic-jackal-viz ros-melodic-people-msgs
+cd {CATKIN_WORKSPACE}/src
+git clone https://github.com/kurshakuz/graduation-project.git
 cd ../
-cd rover_jackal/trajectory_rover/cfg/
-chmod +x set_trajectory_rover.cfg
-cd [workspace]
+rosdep install --from-paths src --ignore-src -r -y
+cd {CATKIN_WORKSPACE}
 catkin_make
 source devel/setup.bash
 ```
+
+## Full simulation launch procedure
+1. Start LMPCC Obstacle Feed
+```console
+roslaunch lmpcc_obstacle_feed lmpcc_obstacle_feed.launch
+```
+2. Start Pedsim simulator with pedestrian trajectories
+```console
+roslaunch pedsim_swarm_simulation pedsim_office_populated.launch
+```
+3. Start Gazebo simulation with Office world
+```console
+roslaunch cpr_office_gazebo office_world_with_plugin.launch
+```
+4. Start localization node and load map
+```console
+roslaunch jackal_navigation amcl_demo.launch map_file:={CATKIN_WORKSPACE}/src/graduation-project/robot_swarm/pedsim_swarm_simulation/maps/mymap.yaml
+```
+5. Start RViz node
+```console
+roslaunch jackal_viz view_robot.launch config:=localization
+```
+6. Start LMPCC Controller
+```console
+roslaunch lmpcc lmpcc.launch
+```
+7. Start static collision avoidance node
+```console
+roslaunch static_collision_avoidance static_collision_avoidance.launch
+```
+8. Start rqt_reconfigure
+```console
+rosrun rqt_reconfigure rqt_reconfigure
+```
+        1. Click on the lmpcc parameters to start the robot motion by press the enable_output button
+        2. Click on the lmpcc parameters to start planning by pressing the plan button
+
+
 ## Running MPC
 * Simulation Environment
 
@@ -80,15 +116,3 @@ source devel/setup.bash
         2. Click on the lmpcc parameters to start the robot motion by press the enable_output button
         3. Click on the lmpcc parameters to start planning by pressing the plan button
 
-
-## Version 1.0 launch procedure
-```
-- roslaunch lmpcc_obstacle_feed lmpcc_obstacle_feed.launch
-- roslaunch pedsim_swarm_simulation pedsim_office_populated.launch
-- roslaunch cpr_office_gazebo office_world_with_plugin.launch
-- roslaunch jackal_navigation amcl_demo.launch map_file:=/home/robot/catkin_ws_grad/src/graduation-project/robot_swarm/pedsim_swarm_simulation/maps/mymap.yaml
-- roslaunch jackal_viz view_robot.launch config:=localization
-- roslaunch lmpcc lmpcc.launch
-- roslaunch static_collision_avoidance static_collision_avoidance.launch
-- rosrun rqt_reconfigure rqt_reconfigure
-```
